@@ -76,16 +76,58 @@
         </div>
     </section>
 
-    <div class="album py-5 bg-light">
 
-        <img src="http://hub.senzing.com/images/subway-map/map.png" class="rounded mx-auto d-block"  alt="" />
+<div id=“xmapholder”>
+  <ul>
+    <li class=“p1”>
+      <a href=“http://en.wikipedia.org/wiki/London” title=“London”></a>
+    </li>
+    <li class=“p2”>
+      <a href=“http://en.wikipedia.org/wiki/Birmingham” title=“Birmingham”></a>
+    </li>
+    <li class=“p3”>
+      <a href=“http://en.wikipedia.org/wiki/Leeds” title=“Leeds”></a>
+    </li>
+    <li class=“p4”>
+      <a href=“http://en.wikipedia.org/wiki/Glasgow” title=“Glasgow”></a>
+    </li>
+    <li class=“p5”>
+      <a href=“http://en.wikipedia.org/wiki/Sheffield” title=“Sheffield”></a>
+    </li>
+    <li class=“p6”>
+      <a href=“http://en.wikipedia.org/wiki/Bradford” title=“Bradford”></a>
+    </li>
+    <li class=“p7”>
+      <a href=“http://en.wikipedia.org/wiki/Edinburgh” title=“Edinburgh”></a>
+    </li>
+    <li class=“p8”>
+      <a href=“http://en.wikipedia.org/wiki/Liverpool” title=“Liverpool”></a>
+    </li>
+    <li class=“p9”>
+      <a href=“http://en.wikipedia.org/wiki/Manchester” title=“Manchester”></a>
+    </li>
+    <li class=“p10”>
+      <a href=“http://en.wikipedia.org/wiki/Bristol” title=“Bristol”></a>
+    </li>
+  </ul>
+</div>
 
-        <div class='bouncediv'>
-            <div id="marker" class='geopin bounce'></div>
-            <div class='geopulse'></div>
-        </div>
+
+<!--
+    <div class="img-container">
+        <img
+            class="rounded mx-auto d-block"
+            src="images/subway-map/map.png"
+            width="816"
+            height="1056"
+            alt="" />
 
     </div>
+
+-->
+
+
+
 
     </main>
 
@@ -111,91 +153,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <script>
-    $(document).ready(function() {
-      $.getJSON("data/certified-stacks.json", function(data) {
-
-        certified = data.data.certifiedStack
-
-        <!-- FIXME: Use list instead of hard coding. -->
-
-        var rowElement = document.getElementById( "gallery-all" )
-        var awsElement = document.getElementById( "gallery-aws" )
-        var kubernetesElement = document.getElementById( "gallery-kubernetes" )
-        var openshiftElement = document.getElementById( "gallery-openshift" )
-        var dockerElement = document.getElementById( "gallery-docker" )
-        var linuxElement = document.getElementById( "gallery-linux" )
-        var macElement = document.getElementById( "gallery-mac" )
-        var windowsElement = document.getElementById( "gallery-windows" )
-        var virtualMachinesElement = document.getElementById( "gallery-virtual-machines")
-
-        $.each(certified, function(key, value) {
-
-          <!-- Pull values from JSON safely. -->
-
-          var thumbnail = value.thumbnail != null ? value.thumbnail : "https://hub.senzing.com/test-ground/img/thumbnail.png"
-          var title = value.title != null ? value.title : "Untitled"
-          var description = value.description != null ? value.description : "No description"
-          var view = value.view != null ? value.view : "https://hub.senzing.com/test-ground"
-          var certifiedCurrent = value.certifiedCurrent != null ? value.certifiedCurrent : "0.0.0"
-          var platforms = value.platforms != null ? value.platforms : []
-
-          <!-- Construct HTML -->
-
-          var htmlTemplate = `
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img src="` + thumbnail + `" alt="..." class="img-thumbnail">
-                <div class="card-body">
-                  <h5>` + title + `</h5>
-                  <p class="card-text">` + description + `</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="` + view + `"
-                        class="btn btn-sm btn-outline-secondary" role="button"
-                        aria-disabled="true">View</a>
-                    </div>
-                    <small class="text-muted">Version `+ certifiedCurrent + `</small>
-                  </div>
-                </div>
-              </div>
-            </div>`
-
-          <!-- Append HTML to Gallery -->
-          <!-- FIXME: Use list instead of hard coding. -->
-
-          $(rowElement).append(htmlTemplate);
-          if (platforms.indexOf("AWS") > -1) {$(awsElement).append(htmlTemplate)}
-          if (platforms.indexOf("Kubernetes") > -1) {$(kubernetesElement).append(htmlTemplate)}
-          if (platforms.indexOf("Openshift") > -1) {$(openshiftElement).append(htmlTemplate)}
-          if (platforms.indexOf("Docker") > -1) {$(dockerElement).append(htmlTemplate)}
-          if (platforms.indexOf("Linux") > -1) {$(linuxElement).append(htmlTemplate)}
-          if (platforms.indexOf("Mac") > -1) {$(macElement).append(htmlTemplate)}
-          if (platforms.indexOf("Windows") > -1) {$(windowsElement).append(htmlTemplate)}
-          if (platforms.indexOf("VirtualMachines") > -1) {$(virtualMachinesElement).append(htmlTemplate)}
-
-        });
-      });
-    });
-  </script>
-
-  <script>
-  $(document).ready(function(){
-
-    element = document.getElementById("marker");
-    setTimeout(function() {
-    element.classList.remove("bounce");
-    }, 1000);
 
 
-    element.addEventListener("click", function(e) {
-    e.preventDefault;
-
-    element.classList.remove("drop");
-    element.offsetWidth = element.offsetWidth;
-    element.classList.add("drop");
-    }, false);
-
-    });
-  </script>
 </html>
