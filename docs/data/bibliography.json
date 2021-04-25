@@ -1,0 +1,79 @@
+{
+    "data": {
+        "bibliography": {
+            "senzingGenericEntitySpecification": {
+                "percentLeft": 11,
+                "percentTop": 26,
+                "title": "Senzing Generic Entity Specification",
+                "view": "https://senzing.zendesk.com/hc/en-us/article_attachments/360102386374/Senzing_Generic_Entity_Specification_v2.4.pdf"
+            },
+            "genericEntitySpecificationMapping": {
+                "percentLeft": 9,
+                "percentTop": 28,
+                "title": "Generic Entity Specification - JSON & CSV Mapping",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/231925448-Generic-Entity-Specification-JSON-CSV-Mapping"
+            },
+            "bob": {
+                "percentLeft": 1,
+                "percentTop": 1,
+                "title": "Generic Entity Specification - JSON & CSV Mapping",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/231925448-Generic-Entity-Specification-JSON-CSV-Mapping",
+                "image": "images/subway-map/you-are-here.png"
+            },
+            "managingTheSenzingApiConfiguration": {
+                "percentLeft": 69,
+                "percentTop": 89,
+                "title": "Managing the Senzing API configuration",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/360010784333--Advanced-Managing-the-Senzing-API-configuration"
+            },
+            "reprocessingWithConfigurationChanges": {
+                "percentLeft": 70,
+                "percentTop": 90,
+                "title": "Reprocessing with configuration changes",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/360010709994--Advanced-Reprocessing-with-configuration-changes"
+            }
+        },
+        "youAreHere": {
+            "docker-compose": {
+                "percentLeft": 9,
+                "percentTop": 28,
+                "title": "docker-compose",
+                "view": "https://github.com/Senzing/docker-compose-demo"
+            },
+            "redoer": {
+                "percentLeft": 9,
+                "percentTop": 28,
+                "title": "redoer",
+                "view": "https://github.com/Senzing/redoer"
+            }
+        },
+        "updated": "2021-04-251T00:00:00Z",
+        "youAreHere": {
+            "docker-compose": {
+                "percentLeft": 9,
+                "percentTop": 28,
+                "title": "docker-compose",
+                "view": "https://github.com/Senzing/docker-compose-demo"
+            },
+            "redoer": {
+                "percentLeft": 9,
+                "percentTop": 28,
+                "title": "redoer",
+                "view": "https://github.com/Senzing/redoer"
+            }
+        }
+    },
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "links": {
+        "self": "http://hub.senzing.com/subway-map/data/bibliography.json"
+    },
+    "meta": {
+        "httpMethod": "GET",
+        "httpStatusCode": 0,
+        "timestamp": "2020-10-31T00:00:00Z",
+        "version": "1.0.0",
+        "restApiVersion": "1.0.0"
+    }
+}

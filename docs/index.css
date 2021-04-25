@@ -35,14 +35,14 @@ footer p {
 
 /* https://markinns.com/archive/create-a-simple-css-pin-map-with-ease.html */
 
-#xmapholder {
+#mapholder {
   width: 400px;
   height: 512px;
   background: url(images/subway-map/uk_map.png);
   position: relative;
   overflow: hidden;
   }
-#xmapholder ul {
+#mapholder ul {
   background: transparent;
   padding: 0;
   margin: 0;
@@ -51,12 +51,12 @@ footer p {
   list-style: none;
   }
 /* needed for IE to function correctly */
-#xmapholder ul li {
+#mapholder ul li {
   display: inline;
   width: 0;
   height: 0;
   }
-#xmapholder ul li a {
+#mapholder ul li a {
   position: absolute;
   display: block;
   width: 20px;
@@ -66,13 +66,13 @@ footer p {
   }
 
 
-#xmapholder ul li.p1 a { left:290px; top:377px; }
-#xmapholder ul li.p2 a { left:227px; top:318px; }
-#xmapholder ul li.p3 a { left:240px; top:260px; }
-#xmapholder ul li.p4 a { left:160px; top:150px; }
-#xmapholder ul li.p5 a { left:235px; top:280px; }
-#xmapholder ul li.p6 a { left:245px; top:260px; }
-#xmapholder ul li.p7 a { left:190px; top:145px; }
-#xmapholder ul li.p8 a { left:200px; top:280px; }
-#xmapholder ul li.p9 a { left:215px; top:280px; }
-#xmapholder ul li.p10 a { left:200px; top:390px; }
+#mapholder ul li.p1 a { left:290px; top:377px; }
+#mapholder ul li.p2 a { left:227px; top:318px; }
+#mapholder ul li.p3 a { left:240px; top:260px; }
+#mapholder ul li.p4 a { left:160px; top:150px; }
+#mapholder ul li.p5 a { left:235px; top:280px; }
+#mapholder ul li.p6 a { left:245px; top:260px; }
+#mapholder ul li.p7 a { left:190px; top:145px; }
+#mapholder ul li.p8 a { left:200px; top:280px; }
+#mapholder ul li.p9 a { left:215px; top:280px; }
+#mapholder ul li.p10 a { left:200px; top:390px; }
