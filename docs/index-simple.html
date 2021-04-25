@@ -73,7 +73,7 @@
           var percentTop = value.percentTop != null ? value.percentTop : 0
           var title = value.title != null ? value.title : "Untitled"
           var view = value.view != null ? value.view : "https://senzing.com"
-          var image = value.image != null ? value.image : "images/subway-map/map_pin.png"
+          var image = value.image != null ? value.image : "images/subway-map/document_pin.png"
           var imageHeight = value.imageHeight != null ? value.imageHeight : "24px"
           var imageWidth = value.imageWidth != null ? value.imageWidth : "20px"
 
@@ -86,7 +86,7 @@
 
           var htmlTemplate = `
             <li>
-              <a href=""` + view + `" title="` + title + `" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(` + image + `); height:` + imageHeight + `; width:` + imageWidth + `"></a>
+              <a href="` + view + `" title="` + title + `" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(` + image + `); height:` + imageHeight + `; width:` + imageWidth + `"></a>
             </li>`
 
           <!-- Append HTML to Gallery -->
