@@ -6,7 +6,7 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="support@senzing.com">
-<title>Senzing Certified</title>
+<title>Senzing Subway map</title>
 <link rel="canonical" href="https://hub.senzing.com/">
 <link rel="icon" type="image/png" sizes="32x32"
     href="/images/favicon/favicon-32x32.png">
@@ -59,7 +59,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a
                 href="https://senzing.com">Senzing</a></li>
-            <li class="breadcrumb-item active" aria-current="page">certified</li>
+            <li class="breadcrumb-item active" aria-current="page">subway map</li>
         </ol>
     </nav>
 
@@ -67,100 +67,24 @@
 
     <section class="jumbotron text-center">
         <div class="container">
-            <h1>Senzing Certified Stacks</h1>
+            <h1>Senzing Subway map</h1>
             <p class="lead text-muted">Welcome to the Senzing
-                Certified Stacks Gallery!</p>
-            <p class="lead text-muted">Senzing Certfied Stacks
-                accelerate integrating Senzing into your existing
-                infrastructure. They are rigorously tested, production
-                ready, and fully supported.</p>
+                Subway map!</p>
+            <p class="lead text-muted">The map helps navigate the
+                plethora of Senzing documentation.
+                </p>
         </div>
     </section>
 
     <div class="album py-5 bg-light">
-        <div class="container">
-            <p>Filter by deployment method</p>
-            <ul class="row nav nav-tabs">
-                <li class="nav-item"><a class="nav-link active"
-                    data-toggle="tab" href="#platform-all">All</a></li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-aws">AWS</a></li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-kubernetes">Kubernetes</a>
-                </li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-openshift">OpenShift</a>
-                </li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-docker">Docker</a>
-                </li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-linux">Linux</a></li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-mac">Mac</a></li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-windows">Windows</a>
-                </li>
-                <li class="nav-item"><a class="nav-link"
-                    data-toggle="tab" href="#platform-virtual-machines">Virtual
-                        machines</a></li>
-            </ul>
 
-            <!-- Tab panes -->
+        <img src="http://hub.senzing.com/images/subway-map/map.png" class="rounded mx-auto d-block"  alt="" />
 
-            <div class="tab-content">
-                <div class="tab-pane container active" id="platform-all">
-                    <div class="container mt-4">
-                        <div id="gallery-all" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade" id="platform-aws">
-                    <div class="container mt-4">
-                        <div id="gallery-aws" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade"
-                    id="platform-kubernetes">
-                    <div class="container mt-4">
-                        <div id="gallery-kubernetes" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade"
-                    id="platform-openshift">
-                    <div class="container mt-4">
-                        <div id="gallery-openshift" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade"
-                    id="platform-docker">
-                    <div class="container mt-4">
-                        <div id="gallery-docker" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade" id="platform-linux">
-                    <div class="container">
-                        <div id="gallery-linux" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade" id="platform-mac">
-                    <div class="container mt-4">
-                        <div id="gallery-mac" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade"
-                    id="platform-windows">
-                    <div class="container mt-4">
-                        <div id="gallery-windows" class="row"></div>
-                    </div>
-                </div>
-                <div class="tab-pane container fade"
-                    id="platform-virtual-machines">
-                    <div class="container mt-4">
-                        <div id="gallery-virtual-machines" class="row"></div>
-                    </div>
-                </div>
-            </div>
+        <div class='bouncediv'>
+            <div id="marker" class='geopin bounce'></div>
+            <div class='geopulse'></div>
         </div>
+
     </div>
 
     </main>
@@ -252,6 +176,26 @@
 
         });
       });
+    });
+  </script>
+
+  <script>
+  $(document).ready(function(){
+
+    element = document.getElementById("marker");
+    setTimeout(function() {
+    element.classList.remove("bounce");
+    }, 1000);
+
+
+    element.addEventListener("click", function(e) {
+    e.preventDefault;
+
+    element.classList.remove("drop");
+    element.offsetWidth = element.offsetWidth;
+    element.classList.add("drop");
+    }, false);
+
     });
   </script>
 </html>
