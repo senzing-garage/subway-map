@@ -14,11 +14,13 @@
                 "view": "https://senzing.zendesk.com/hc/en-us/articles/231925448-Generic-Entity-Specification-JSON-CSV-Mapping"
             },
             "bob": {
-                "percentLeft": 1,
-                "percentTop": 1,
+                "percentLeft": 10,
+                "percentTop": 10,
                 "title": "Generic Entity Specification - JSON & CSV Mapping",
                 "view": "https://senzing.zendesk.com/hc/en-us/articles/231925448-Generic-Entity-Specification-JSON-CSV-Mapping",
-                "image": "images/subway-map/you-are-here.png"
+                "imageHeight": "89px",
+                "imageWidth": "50px",
+                "image": "images/subway-map/you-are-here_50x89.png"
             },
             "managingTheSenzingApiConfiguration": {
                 "percentLeft": 69,
