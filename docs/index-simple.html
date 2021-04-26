@@ -1,50 +1,50 @@
 <!doctype html>
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Senzing subway map</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Senzing subway map</title>
 
-    <style>
+<style>
+#mapholder {
+  background: url(images/subway-map/map.png);
+  height: 1056px;
+  overflow: hidden;
+  position: relative;
+  width: 816px;
+}
 
-    #mapholder {
-    background: url(images/subway-map/map.png);
-    height: 1056px;
-    overflow: hidden;
-    position: relative;
-    width: 816px;
-    }
+#mapholder ul {
+  background: transparent;
+  height: 512px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
 
-    #mapholder ul {
-    background: transparent;
-    height: 512px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 400px;
-    }
+#mapholder ul li {
+  display: inline;
+  height: 0;
+  width: 0;
+}
 
-    #mapholder ul li {
-    display: inline;
-    height: 0;
-    width: 0;
-    }
+#mapholder ul li a {
+  background: url(images/subway-map/map_pin.png);
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  position: absolute;
+  width: 20px;
+}
+</style>
 
-    #mapholder ul li a {
-    background: url(images/subway-map/map_pin.png);
-    cursor: pointer;
-    display: block;
-    height: 24px;
-    position: absolute;
-    width: 20px;
-    }
+</head>
 
-    </style>
+<body>
 
-  </head>
-
-  <body>
-
-    <div id="mapholder"><ul id="pin-list"></ul></div>
+    <div id="mapholder">
+        <ul id="pin-list"></ul>
+    </div>
 
     <!-- Scripts -->
 
@@ -115,17 +115,24 @@
 
             var htmlTemplate = `
               <li>
-                <a href="#" title="You are here" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(images/subway-map/you-are-here-50x89.png); height:89px; width:50px"></a>
+                <a id="youAreHere" href="#" title="You are here" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(images/subway-map/you-are-here-50x89.png); height:89px; width:50px"></a>
               </li>`
 
             <!-- Append HTML to Gallery -->
 
             $(ulElement).append(htmlTemplate);
+
+            <!-- Scroll to element.  This is a little tricky to allow the original anchor to be seen in the address bar -->
+
+            location.href = "#";
+            location.href = "#youAreHere";
+            location.href = anchor;
+
           }
         };
       });
     });
     </script>
 
-  </body>
+</body>
 </html>
