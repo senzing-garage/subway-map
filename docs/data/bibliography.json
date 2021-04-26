@@ -71,7 +71,7 @@
                 "view": "https://senzing.zendesk.com/hc/en-us/articles/360010709994--Advanced-Reprocessing-with-configuration-changes"
             }
         },
-        "updated": "2021-04-251T00:00:00Z",
+        "updated": "2021-04-261T00:00:00Z",
         "youAreHere": {
             "aws-cloudformation-ecs-poc-simple": {
                 "percentLeft": 77,
@@ -104,7 +104,7 @@
     "meta": {
         "httpMethod": "GET",
         "httpStatusCode": 0,
-        "timestamp": "2020-10-31T00:00:00Z",
+        "timestamp": "2021-04-26T00:00:00Z",
         "version": "1.0.0",
         "restApiVersion": "1.0.0"
     }
