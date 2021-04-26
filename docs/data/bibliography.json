@@ -1,0 +1,111 @@
+{
+    "data": {
+        "bibliography": {
+            "senzingGenericEntitySpecification": {
+                "percentLeft": 11,
+                "percentTop": 26,
+                "title": "Senzing Generic Entity Specification",
+                "view": "https://senzing.zendesk.com/hc/en-us/article_attachments/360102386374/Senzing_Generic_Entity_Specification_v2.4.pdf"
+            },
+            "genericEntitySpecificationMapping": {
+                "percentLeft": 9,
+                "percentTop": 28,
+                "title": "Generic Entity Specification - JSON & CSV Mapping",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/231925448-Generic-Entity-Specification-JSON-CSV-Mapping"
+            },
+            "managingTheSenzingApiConfiguration": {
+                "percentLeft": 68,
+                "percentTop": 88,
+                "title": "Managing the Senzing API configuration",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/360010784333--Advanced-Managing-the-Senzing-API-configuration"
+            },
+            "senzing-up": {
+                "image": "images/subway-map/GitHub-Mark-32px.png",
+                "imageHeight": "32px",
+                "imageWidth": "32px",
+                "percentLeft": 40,
+                "percentTop": 25,
+                "title": "senzing-up",
+                "view": "https://github.com/Senzing/senzing-up"
+            },
+            "docker-compose-demo": {
+                "image": "images/subway-map/GitHub-Mark-32px.png",
+                "imageHeight": "32px",
+                "imageWidth": "32px",
+                "percentLeft": 70,
+                "percentTop": 25,
+                "title": "docker-compose-demo",
+                "view": "https://github.com/Senzing/docker-compose-demo"
+            },
+            "aws-cloudformation-ecs-poc-simple": {
+                "image": "images/subway-map/GitHub-Mark-32px.png",
+                "imageHeight": "32px",
+                "imageWidth": "32px",
+                "percentLeft": 85,
+                "percentTop": 25,
+                "title": "aws-cloudformation-ecs-poc-simple",
+                "view": "https://github.com/Senzing/aws-cloudformation-ecs-poc-simple"
+            },
+            "charts": {
+                "image": "images/subway-map/GitHub-Mark-32px.png",
+                "imageHeight": "32px",
+                "imageWidth": "32px",
+                "percentLeft": 87,
+                "percentTop": 47,
+                "title": "charts",
+                "view": "https://github.com/Senzing/charts"
+            },
+            "senzing-rest-api-specification": {
+                "image": "images/subway-map/GitHub-Mark-32px.png",
+                "imageHeight": "32px",
+                "imageWidth": "32px",
+                "percentLeft": 15,
+                "percentTop": 75,
+                "title": "senzing-rest-api-specification",
+                "view": "https://github.com/Senzing/senzing-rest-api-specification"
+            },
+            "reprocessingWithConfigurationChanges": {
+                "percentLeft": 70,
+                "percentTop": 90,
+                "title": "Reprocessing with configuration changes",
+                "view": "https://senzing.zendesk.com/hc/en-us/articles/360010709994--Advanced-Reprocessing-with-configuration-changes"
+            }
+        },
+        "updated": "2021-04-251T00:00:00Z",
+        "youAreHere": {
+            "aws-cloudformation-ecs-poc-simple": {
+                "percentLeft": 77,
+                "percentTop": 18
+            },
+            "docker-compose": {
+                "percentLeft": 62,
+                "percentTop": 18
+            },
+            "redoer": {
+                "percentLeft": 19,
+                "percentTop": 39
+            },
+            "senzing-up": {
+                "percentLeft": 45,
+                "percentTop": 18
+            },
+            "new-release": {
+                "percentLeft": 72,
+                "percentTop": 82
+            }
+        }
+    },
+    "jsonapi": {
+        "version": "1.0"
+    },
+    "links": {
+        "self": "http://hub.senzing.com/subway-map/data/bibliography.json"
+    },
+    "meta": {
+        "httpMethod": "GET",
+        "httpStatusCode": 0,
+        "timestamp": "2020-10-31T00:00:00Z",
+        "version": "1.0.0",
+        "restApiVersion": "1.0.0"
+    }
+}

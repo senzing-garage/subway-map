@@ -1,0 +1,78 @@
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+
+/* https://markinns.com/archive/create-a-simple-css-pin-map-with-ease.html */
+
+#mapholder {
+  width: 400px;
+  height: 512px;
+  background: url(images/subway-map/uk_map.png);
+  position: relative;
+  overflow: hidden;
+  }
+#mapholder ul {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+  height: 512px;
+  list-style: none;
+  }
+/* needed for IE to function correctly */
+#mapholder ul li {
+  display: inline;
+  width: 0;
+  height: 0;
+  }
+#mapholder ul li a {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 24px;
+  background: url(images/subway-map/map_pin.png);
+  cursor: pointer;
+  }
+
+
+#mapholder ul li.p1 a { left:290px; top:377px; }
+#mapholder ul li.p2 a { left:227px; top:318px; }
+#mapholder ul li.p3 a { left:240px; top:260px; }
+#mapholder ul li.p4 a { left:160px; top:150px; }
+#mapholder ul li.p5 a { left:235px; top:280px; }
+#mapholder ul li.p6 a { left:245px; top:260px; }
+#mapholder ul li.p7 a { left:190px; top:145px; }
+#mapholder ul li.p8 a { left:200px; top:280px; }
+#mapholder ul li.p9 a { left:215px; top:280px; }
+#mapholder ul li.p10 a { left:200px; top:390px; }

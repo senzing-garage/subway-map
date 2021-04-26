@@ -1,0 +1,131 @@
+<!doctype html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Senzing subway map</title>
+
+    <style>
+
+    #mapholder {
+    background: url(images/subway-map/map.png);
+    height: 1056px;
+    overflow: hidden;
+    position: relative;
+    width: 816px;
+    }
+
+    #mapholder ul {
+    background: transparent;
+    height: 512px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    }
+
+    #mapholder ul li {
+    display: inline;
+    height: 0;
+    width: 0;
+    }
+
+    #mapholder ul li a {
+    background: url(images/subway-map/map_pin.png);
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    position: absolute;
+    width: 20px;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="mapholder"><ul id="pin-list"></ul></div>
+
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
+    <script>
+    $(document).ready(function() {
+      $.getJSON("data/bibliography.json", function(data) {
+
+        bibliography = data.data.bibliography
+
+        var ulElement = document.getElementById( "pin-list" )
+        var anchor = window.location.hash
+
+        <!-- FIXME: find dimensions dynamically. -->
+
+        var mapholderHeight = 1056
+        var mapholderWidth = 816
+
+        $.each(bibliography, function(key, value) {
+
+          <!-- Pull values from JSON safely. -->
+
+          var percentLeft = value.percentLeft != null ? value.percentLeft : 0
+          var percentTop = value.percentTop != null ? value.percentTop : 0
+          var title = value.title != null ? value.title : "Untitled"
+          var view = value.view != null ? value.view : "https://senzing.com"
+          var image = value.image != null ? value.image : "images/subway-map/document_pin.png"
+          var imageHeight = value.imageHeight != null ? value.imageHeight : "24px"
+          var imageWidth = value.imageWidth != null ? value.imageWidth : "20px"
+
+          <!-- Transform percent into actual pixels -->
+
+          left_px = Math.floor(percentLeft * (mapholderWidth/100))
+          top_px = Math.floor(percentTop * (mapholderHeight/100))
+
+          <!-- Construct HTML -->
+
+          var htmlTemplate = `
+            <li>
+              <a href="` + view + `" title="` + title + `" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(` + image + `); height:` + imageHeight + `; width:` + imageWidth + `"></a>
+            </li>`
+
+          <!-- Append HTML to Gallery -->
+
+          $(ulElement).append(htmlTemplate);
+        });
+
+        <!-- Process "You Are Here" -->
+
+        if (anchor) {
+          anchor_key = anchor.substring(1)
+          youAreHere = data.data.youAreHere
+          if (anchor_key in youAreHere) {
+
+            value = youAreHere[anchor_key]
+            var percentLeft = value.percentLeft != null ? value.percentLeft : 0
+            var percentTop = value.percentTop != null ? value.percentTop : 0
+
+            <!-- Transform percent into actual pixels -->
+
+            left_px = Math.floor(percentLeft * (mapholderWidth/100))
+            top_px = Math.floor(percentTop * (mapholderHeight/100))
+
+            <!-- Construct HTML -->
+
+            var htmlTemplate = `
+              <li>
+                <a href="#" title="You are here" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(images/subway-map/you-are-here-50x89.png); height:89px; width:50px"></a>
+              </li>`
+
+            <!-- Append HTML to Gallery -->
+
+            $(ulElement).append(htmlTemplate);
+          }
+        };
+      });
+    });
+    </script>
+
+  </body>
+</html>
