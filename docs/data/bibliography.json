@@ -37,7 +37,6 @@
                 "title": "docker-compose-demo",
                 "view": "https://github.com/Senzing/docker-compose-demo"
             },
-
             "aws-cloudformation-ecs-poc-simple": {
                 "image": "images/subway-map/GitHub-Mark-32px.png",
                 "imageHeight": "32px",
@@ -74,22 +73,25 @@
         },
         "updated": "2021-04-251T00:00:00Z",
         "youAreHere": {
-            "bob": {
-                "image": "images/subway-map/you-are-here_50x89.png",
-                "imageHeight": "89px",
-                "imageWidth": "50px",
-                "percentLeft": 10,
-                "percentTop": 15,
-                "title": "Generic Entity Specification - JSON & CSV Mapping",
-                "view": "https://senzing.zendesk.com/hc/en-us/articles/231925448-Generic-Entity-Specification-JSON-CSV-Mapping"
+            "aws-cloudformation-ecs-poc-simple": {
+                "percentLeft": 77,
+                "percentTop": 18
             },
             "docker-compose": {
-                "percentLeft": 9,
-                "percentTop": 28
+                "percentLeft": 62,
+                "percentTop": 18
             },
             "redoer": {
-                "percentLeft": 9,
-                "percentTop": 28
+                "percentLeft": 19,
+                "percentTop": 39
+            },
+            "senzing-up": {
+                "percentLeft": 45,
+                "percentTop": 18
+            },
+            "new-release": {
+                "percentLeft": 72,
+                "percentTop": 82
             }
         }
     },

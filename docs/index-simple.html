@@ -59,6 +59,7 @@
         bibliography = data.data.bibliography
 
         var ulElement = document.getElementById( "pin-list" )
+        var anchor = window.location.hash
 
         <!-- FIXME: find dimensions dynamically. -->
 
@@ -92,8 +93,36 @@
           <!-- Append HTML to Gallery -->
 
           $(ulElement).append(htmlTemplate);
-
         });
+
+        <!-- Process "You Are Here" -->
+
+        if (anchor) {
+          anchor_key = anchor.substring(1)
+          youAreHere = data.data.youAreHere
+          if (anchor_key in youAreHere) {
+
+            value = youAreHere[anchor_key]
+            var percentLeft = value.percentLeft != null ? value.percentLeft : 0
+            var percentTop = value.percentTop != null ? value.percentTop : 0
+
+            <!-- Transform percent into actual pixels -->
+
+            left_px = Math.floor(percentLeft * (mapholderWidth/100))
+            top_px = Math.floor(percentTop * (mapholderHeight/100))
+
+            <!-- Construct HTML -->
+
+            var htmlTemplate = `
+              <li>
+                <a href="#" title="You are here" style="left:` + left_px + `px; top:` + top_px + `px; background-image: url(images/subway-map/you-are-here_50x89.png); height:89px; width:50px"></a>
+              </li>`
+
+            <!-- Append HTML to Gallery -->
+
+            $(ulElement).append(htmlTemplate);
+          }
+        };
       });
     });
     </script>
