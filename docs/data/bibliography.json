@@ -26,7 +26,7 @@
                 "percentLeft": 40,
                 "percentTop": 25,
                 "title": "senzing-up",
-                "view": "https://github.com/Senzing/senzing-up"
+                "view": "https://github.com/senzing-garage/senzing-up"
             },
             "docker-compose-demo": {
                 "image": "images/subway-map/GitHub-Mark-32px.png",
@@ -35,7 +35,7 @@
                 "percentLeft": 70,
                 "percentTop": 25,
                 "title": "docker-compose-demo",
-                "view": "https://github.com/Senzing/docker-compose-demo"
+                "view": "https://github.com/senzing-garage/docker-compose-demo"
             },
             "aws-cloudformation-ecs-poc-simple": {
                 "image": "images/subway-map/GitHub-Mark-32px.png",
@@ -44,7 +44,7 @@
                 "percentLeft": 85,
                 "percentTop": 25,
                 "title": "aws-cloudformation-ecs-poc-simple",
-                "view": "https://github.com/Senzing/aws-cloudformation-ecs-poc-simple"
+                "view": "https://github.com/senzing-garage/aws-cloudformation-ecs-poc-simple"
             },
             "charts": {
                 "image": "images/subway-map/GitHub-Mark-32px.png",
@@ -53,7 +53,7 @@
                 "percentLeft": 87,
                 "percentTop": 47,
                 "title": "charts",
-                "view": "https://github.com/Senzing/charts"
+                "view": "https://github.com/senzing-garage/charts"
             },
             "senzing-rest-api-specification": {
                 "image": "images/subway-map/GitHub-Mark-32px.png",
@@ -62,7 +62,7 @@
                 "percentLeft": 15,
                 "percentTop": 75,
                 "title": "senzing-rest-api-specification",
-                "view": "https://github.com/Senzing/senzing-rest-api-specification"
+                "view": "https://github.com/senzing-garage/senzing-rest-api-specification"
             },
             "reprocessingWithConfigurationChanges": {
                 "percentLeft": 70,
